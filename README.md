@@ -1,3 +1,4 @@
-# My Awesome Book
+# Python 从0到1
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+记录 Python 学习过程中需要记忆的知识点。
+
