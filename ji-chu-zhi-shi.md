@@ -28,6 +28,12 @@ C:\work>python calc.py
 $ chmod a+x hello.py
 ```
 
+最后输入\(文件名前加 ./\)
+
+```
+./xx.py
+```
+
 
 
 
