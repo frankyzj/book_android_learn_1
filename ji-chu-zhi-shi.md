@@ -34,7 +34,16 @@ $ chmod a+x hello.py
 ./xx.py
 ```
 
+#### 在 Windows 下执行 .py 文件
 
+在环境变量PATHEXT中添加一个.PY
+
+```
+D:\Programming\Python>set PathExt=.PY;%PathExt%
+
+D:\Programming\Python>hello
+Hello,world
+```
 
 
 
