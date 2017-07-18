@@ -28,5 +28,7 @@ calc\(\*nums\)
 
 可以传入任意个参数。在函数内部，参数`nums`接收到的是一个tuple。
 
+* 可以在 list 或 tuple 前面加一个`*`号，把list或tuple的元素变成可变参数传进去。
+
 
 
