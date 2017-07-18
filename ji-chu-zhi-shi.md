@@ -113,7 +113,9 @@ $$1.23*10^9$$就是`1.23e9`，或者`12.3e8`，0.000012可以写成`1.2e-5。`
 
 ### 集合
 
-#### List
+#### list
+
+list是一种有序的集合，可以随时添加和删除其中的元素。
 
 ```
 classmates = ['Michael', 'Bob', 'Tracy']
@@ -124,6 +126,16 @@ classmates = ['Michael', 'Bob', 'Tracy']
 ```
 classmates[-1]：'Tracy’
 ```
+
+list 中可以存放不同类型的数据，包括 list 。
+
+可以直接赋值给索引位置： classmates\[1\] = 'Sarah'
+
+#### tuple
+
+tuple一旦初始化就不能修改。
+
+
 
 
 
