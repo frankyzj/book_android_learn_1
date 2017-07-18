@@ -2,7 +2,7 @@
 
 print\(\)   可以输入多个字符串，整数等。
 
-input\(\): name = input\(\)
+input\(\): name = input\(\),返回的数据类型是str
 
 #### 字符串
 
