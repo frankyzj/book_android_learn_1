@@ -18,3 +18,11 @@ encode\(\) 、 decode\(\)
 
 `str`通过`encode()`方法可以编码为指定的`bytes:` '中文'.encode\('utf-8'\)。
 
+`len()`
+
+计算`str`的字符数，计算`bytes 的字节数：len('中文') = 3，len('中文'.encode('utf-8')) = 6。`
+
+
+
+
+
