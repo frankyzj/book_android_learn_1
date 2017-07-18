@@ -39,7 +39,28 @@ def person(name, age, **kw):
     print('name:', name, 'age:', age, 'other:', kw)
 ```
 
+调用1：
 
+```
+person('Michael', 30)
+```
+
+调用2：
+
+```
+person('Bob', 35, city='Beijing')
+输出：
+Bob age: 35 other: {'city': 'Beijing'}
+```
+
+调用3：
+
+```
+extra = {'city': 'Beijing', 'job': 'Engineer'}
+person('Jack', 24, **extra)
+输出：
+name: Jack age: 24 other: {'city': 'Beijing', 'job': 'Engineer'}
+```
 
 
 
