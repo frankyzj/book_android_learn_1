@@ -151,7 +151,7 @@ tuple一旦初始化就不能修改。
 
 #### while
 
-
+* 少用 break 和 continue，几乎所有 break 和 continue 都可以通过优化逻辑省略。
 
 
 
