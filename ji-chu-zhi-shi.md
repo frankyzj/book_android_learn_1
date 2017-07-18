@@ -165,5 +165,9 @@ d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
 
 * 如果 key 不存在，dict 会报错，取值前应当用 'Thomas' in d 进行判断。
 
+### set
+
+保存不重复的一组数据。
+
 
 
