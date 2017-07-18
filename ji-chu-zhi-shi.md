@@ -20,7 +20,11 @@ C:\work>python calc.py
 
 ```
 #!/usr/bin/env python3
+
+# -*- coding: utf-8 -*-
 ```
+
+每个 Python 文件都应当添加如上两行，第一行告诉 Unix / linux 系统，该文件是可执行程序，第二行说明该文档采用 utf-8 编码。
 
 然后通过命令行给 .py 文件以执行权限：
 
