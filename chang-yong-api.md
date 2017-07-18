@@ -50,5 +50,7 @@ d.get\('Mike'\)
 
 如果 key 'Mike' 不存在，则返回None，或者 d.get\('Mike', -1\) 返回默认值 -1 。
 
+d.pop\('Bob'\)
 
+从 d 中删除一个键值对。
 
