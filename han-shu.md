@@ -64,14 +64,23 @@ name: Jack age: 24 other: {'city': 'Beijing', 'job': 'Engineer'}
 
 #### 命名关键字参数
 
-如果要限制关键字参数的名字，就可以用命名关键字参数，例如，只接收`city`和`job`作为关键字参数。
+如果要限制关键字参数的名字，就可以用命名关键字参数，例如，只接收`city`和`job`作为关键字参数。命名关键字参数必须传入参数名。
 
 ```
 def person(name, age, *, city, job):
     print(name, age, city, job)
 ```
 
-`*`后面的参数被视为命名关键字参数。
+* 后面的参数被视为命名关键字参数。
+
+* 如果函数定义中已经有了一个可变参数，后面跟着的命名关键字参数就不再需要一个特殊分隔符`*`了：
+
+```
+def person(name, age, *args, city, job):
+    print(name, age, args, city, job)
+```
+
+* 命名关键字参数可以有默认值，从而简化调用。
 
 
 
