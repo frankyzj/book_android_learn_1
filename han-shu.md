@@ -64,7 +64,14 @@ name: Jack age: 24 other: {'city': 'Beijing', 'job': 'Engineer'}
 
 #### 命名关键字参数
 
+如果要限制关键字参数的名字，就可以用命名关键字参数，例如，只接收`city`和`job`作为关键字参数。
 
+```
+def person(name, age, *, city, job):
+    print(name, age, city, job)
+```
+
+`*`后面的参数被视为命名关键字参数。
 
 
 
