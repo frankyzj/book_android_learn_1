@@ -22,7 +22,21 @@ encode\(\) 、 decode\(\)
 
 计算`str`的字符数，计算`bytes 的字节数：len('中文') = 3，len('中文'.encode('utf-8')) = 6。`
 
+#### List
 
+classmates.append\('Adam'\)
 
+往 classmates 末尾追加一个元素。
 
+classmates.inset\(1，'Adam'\)
+
+向指定位置插入一个元素。
+
+classmates.pop\(\)
+
+从 classmates 中删除最后一个元素。
+
+classmates.pop\(i\)
+
+删除指定位置的元素。
 
