@@ -14,7 +14,7 @@ input\(\): name = input\(\)
 
 函数把编码转换为对应的字符
 
-encode\(\)
+encode\(\) 、 decode\(\)
 
 `str`通过`encode()`方法可以编码为指定的`bytes:` '中文'.encode\('utf-8'\)。
 
