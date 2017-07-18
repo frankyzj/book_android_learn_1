@@ -34,5 +34,12 @@ calc\(\*nums\)
 
 传入0个或任意个含参数名的参数，这些关键字参数在函数内部自动组装为一个dict。
 
+```
+def person(name, age, **kw):
+    print('name:', name, 'age:', age, 'other:', kw)
+```
+
+
+
 
 
