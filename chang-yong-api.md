@@ -22,6 +22,10 @@ encode\(\) 、 decode\(\)
 
 计算`str`的字符数，计算`bytes 的字节数：len('中文') = 3，len('中文'.encode('utf-8')) = 6。`
 
+strip\(\)
+
+移除字符串头尾指定的字符。
+
 #### List
 
 classmates.append\('Adam'\)
@@ -78,6 +82,4 @@ int\("12.34"\) 输出 12
 str\(1\) 输出 '1'
 
 bool\(1\) 输出 True
-
-
 
