@@ -97,5 +97,14 @@ for x, y in [(1, 1), (2, 4), (3, 9)]:
 ['AX', 'AY', 'AZ', 'BX', 'BY', 'BZ', 'CX', 'CY', 'CZ']
 ```
 
+列出当前目录下的所有文件和目录：
+
+```
+>>> import os # 导入os模块
+>>> [d for d in os.listdir('.')] # os.listdir可以列出文件和目录
+['.emacs.d', '.ssh', '.Trash', 'Adlm', 'Applications', 'Desktop', 'Documents', 
+'Downloads', 'Library', 'Movies', 'Music', 'Pictures', 'Public', 'VirtualBox VMs', 'Workspace', 'XCode']
+```
+
 
 
