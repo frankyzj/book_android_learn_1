@@ -130,7 +130,18 @@ def fib(max):
 
 generator的函数在每次调用`next()`的时候执行，遇到`yield`语句返回，再次执行时从上次返回的`yield`语句处继续执行。
 
-
-
 用`for`循环调用generator时，发现拿不到 generator 的`return`语句的返回值。如果想要拿到返回值，必须捕获`StopIteration`错误，返回值包含在`StopIteration`的`value`中。
+
+```
+g = fib(6)
+while True:
+     try:
+         x = next(g)
+         print('g:', x)
+     except StopIteration as e:
+         print('Generator return value:', e.value)
+         break
+```
+
+
 
