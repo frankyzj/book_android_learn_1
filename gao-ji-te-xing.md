@@ -89,5 +89,13 @@ for x, y in [(1, 1), (2, 4), (3, 9)]:
 [x * x for x in range(1, 11) if x % 2 == 0]
 ```
 
+* 双层循环
+
+```
+[m + n for m in 'ABC' for n in 'XYZ']
+输出
+['AX', 'AY', 'AZ', 'BX', 'BY', 'BZ', 'CX', 'CY', 'CZ']
+```
+
 
 
