@@ -37,5 +37,14 @@ L[:]
 
 其中 L 可以是 list、tuple 或者 字符串。
 
+### 迭代Iteration
+
+dict 的迭代：
+
+```
+>>> d = {'a': 1, 'b': 2, 'c': 3}
+>>> for key in d:
+```
+
 
 
