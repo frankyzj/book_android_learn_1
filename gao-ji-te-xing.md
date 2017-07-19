@@ -57,7 +57,14 @@ from collections import Iterable
 isinstance('abc', Iterable) # str是否可迭代，返回True
 ```
 
+* Python内置的`enumerate`函数可以把一个list变成索引-元素对，这样就可以在`for`循环中同时迭代索引和元素本身：
 
+```
+for i, value in enumerate(['A', 'B', 'C']):
+     print(i, value)
+```
+
+* for 循环可以同时引用两个变量
 
 
 
