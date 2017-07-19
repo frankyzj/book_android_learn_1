@@ -145,7 +145,12 @@ while True:
 
 ### 迭代器Iterator
 
+可以被`next()`函数调用并不断返回下一个值的对象称为迭代器。
 
+```
+from collections import Iterator
+isinstance((x for x in range(10)), Iterator)
+```
 
 
 
