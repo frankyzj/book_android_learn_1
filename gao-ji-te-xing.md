@@ -42,9 +42,22 @@ L[:]
 dict 的迭代：
 
 ```
->>> d = {'a': 1, 'b': 2, 'c': 3}
->>> for key in d:
+d = {'a': 1, 'b': 2, 'c': 3}
+for key in d:
+或者
+for value in d.values()：
+或者
+for k, v in d.items()：
 ```
+
+* 判断一个对象是否可迭代
+
+```
+from collections import Iterable
+isinstance('abc', Iterable) # str是否可迭代，返回True
+```
+
+
 
 
 
