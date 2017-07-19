@@ -106,5 +106,9 @@ for x, y in [(1, 1), (2, 4), (3, 9)]:
 'Downloads', 'Library', 'Movies', 'Music', 'Pictures', 'Public', 'VirtualBox VMs', 'Workspace', 'XCode']
 ```
 
+### 生成器Generator
+
+
+
 
 
