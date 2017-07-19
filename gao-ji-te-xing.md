@@ -122,13 +122,11 @@ next\(g\) 获取下一个值，或者使用 for 循环。
 def fib(max):
     n, a, b = 0, 0, 1
     while n < max:
-        yield b
+        yield b # 生成器的关键字
         a, b = b, a + b
         n = n + 1
     return 'done'
 ```
 
 generator的函数在每次调用`next()`的时候执行，遇到`yield`语句返回，再次执行时从上次返回的`yield`语句处继续执行。
-
-
 
