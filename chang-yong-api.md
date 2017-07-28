@@ -89,5 +89,10 @@ import os
 
 os.getcwd\(\)
 
+```
+#更改当前工作目录
+>>>os.chdir('d:\')
+```
+
 
 
