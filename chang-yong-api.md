@@ -83,3 +83,11 @@ str\(1\) 输出 '1'
 
 bool\(1\) 输出 True
 
+#### 指定到当前工作目录
+
+import os
+
+os.getcwd\(\)
+
+
+
