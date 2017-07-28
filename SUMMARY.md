@@ -6,4 +6,5 @@
 * [常用 API](chang-yong-api.md)
 * [函数](han-shu.md)
 * [高级特性](gao-ji-te-xing.md)
+* [模块](mo-kuai.md)
 
