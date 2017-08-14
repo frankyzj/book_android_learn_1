@@ -7,4 +7,5 @@
 * [函数](han-shu.md)
 * [高级特性](gao-ji-te-xing.md)
 * [模块](mo-kuai.md)
+* [面向对象](mian-xiang-dui-xiang.md)
 
