@@ -1,97 +1,74 @@
-# 常用 API
+[http://www.json.org/json-zh.html](http://www.json.org/json-zh.html)
 
-print\(\)   可以输入多个字符串，整数等。
-
-input\(\): name = input\(\),返回的数据类型是str。
-
-#### 字符串
-
-`ord()`
-
-函数获取字符的整数表示，
-
-`chr()`
-
-函数把编码转换为对应的字符
-
-encode\(\) 、 decode\(\)
-
-`str`通过`encode()`方法可以编码为指定的`bytes:` '中文'.encode\('utf-8'\)。
-
-`len()`
-
-计算`str`的字符数，计算`bytes 的字节数：len('中文') = 3，len('中文'.encode('utf-8')) = 6。`
-
-strip\(\)
-
-移除字符串头尾指定的字符。
-
-#### List
-
-classmates.append\('Adam'\)
-
-往 classmates 末尾追加一个元素。
-
-classmates.inset\(1，'Adam'\)
-
-向指定位置插入一个元素。
-
-classmates.pop\(\)
-
-从 classmates 中删除最后一个元素。
-
-classmates.pop\(i\)
-
-删除指定位置的元素。
-
-range\(\)
-
-生成一个整数序列。
-
-sort\(\)
-
-#### dict
-
-d.get\('Mike'\)
-
-如果 key 'Mike' 不存在，则返回None，或者 d.get\('Mike', -1\) 返回默认值 -1 。
-
-d.pop\('Bob'\)
-
-从 d 中删除一个键值对。
-
-#### set
-
-s.add\('1'\)
-
-s.remove\('1'\)
+# 1. JSONObject 和 JSONArray {#1-jsonobject-和-jsonarray}
 
 ```
->>>s1 = set([1, 2, 3])
->>>s2 = set([2, 3, 4])
->>>s1 & s2
-{2, 3}
->>>s1 | s2
-{1, 2, 3, 4}
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+
+public class JsonTest {
+
+    public static void main(String[] args) {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("username", "huangwuyi");
+        jsonObject.put("sex", "男");
+        jsonObject.put("QQ", "413425430");
+        jsonObject.put("Min.score", new Integer(99));
+        jsonObject.put("nickname", "梦中心境");
+        // 输出jsonobject对象
+        System.out.println("=====jsonObject：" + jsonObject);
+
+        // 判读输出对象的类型
+        boolean isArray = jsonObject.isArray();
+        boolean isEmpty = jsonObject.isEmpty();
+        boolean isNullObject = jsonObject.isNullObject();
+        System.out.println("=====是否为数组:" + isArray + "， 是否为空:" + isEmpty
+                + "， isNullObject:" + isNullObject);
+
+        // 添加属性，在jsonObject后面追加元素。
+        jsonObject.element("address", "福建省厦门市");
+        System.out.println("=====添加属性后的对象：" + jsonObject);
+
+        // 返回一个JSONArray对象
+        JSONArray jsonArray = new JSONArray();
+        jsonArray.add(0, "this is a jsonArray value");
+        jsonArray.add(1, "another jsonArray value");
+        jsonObject.element("jsonArray", jsonArray);
+        // 在jsonObject后面住家一个jsonArray
+        JSONArray array = jsonObject.getJSONArray("jsonArray");
+        System.out.println(jsonObject);
+
+        System.out.println("=====返回一个JSONArray对象：" + array);
+        // 添加JSONArray后的值
+        // {"username":"huangwuyi","sex":"男","QQ":"413425430","Min.score":99,"nickname":"梦中心境","address":"福建省厦门市","jsonArray":["this is a jsonArray value","another jsonArray value"]}
+        System.out.println("=====结果:" + jsonObject);
+
+        // 根据key返回一个字符串
+        String username = jsonObject.getString("username");
+        System.out.println("=====username:" + username);
+
+        // 把字符转换为 JSONObject
+        String temp = jsonObject.toString();
+        JSONObject object = JSONObject.fromObject(temp);
+        // 转换后根据Key返回值
+        System.out.println("=====qq:" + object.get("QQ"));
+
+    }
+}
+
 ```
 
-#### 数据类型转换
-
-int\("12.34"\) 输出 12
-
-str\(1\) 输出 '1'
-
-bool\(1\) 输出 True
-
-#### 指定到当前工作目录
-
-import os
-
-os.getcwd\(\)
+输出结果为：
 
 ```
-#更改当前工作目录
->>>os.chdir('d:\')
+=====jsonObject：{"username":"huangwuyi","sex":"男","QQ":"413425430","Min.score":99,"nickname":"梦中心境"}
+=====是否为数组:false， 是否为空:false， isNullObject:false
+=====添加属性后的对象：{"username":"huangwuyi","sex":"男","QQ":"413425430","Min.score":99,"nickname":"梦中心境","address":"福建省厦门市"}
+{"username":"huangwuyi","sex":"男","QQ":"413425430","Min.score":99,"nickname":"梦中心境","address":"福建省厦门市","jsonArray":["this is a jsonArray value","another jsonArray value"]}
+=====返回一个JSONArray对象：["this is a jsonArray value","another jsonArray value"]
+=====结果:{"username":"huangwuyi","sex":"男","QQ":"413425430","Min.score":99,"nickname":"梦中心境","address":"福建省厦门市","jsonArray":["this is a jsonArray value","another jsonArray value"]}
+=====username:huangwuyi
+=====qq:413425430
 ```
 
 
